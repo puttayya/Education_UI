@@ -1,0 +1,54 @@
+.app-toolbar {
+    /* position: fixed;
+    top: 1;
+    z-index: 1000; */
+    justify-content: space-between;
+}
+
+span {
+    padding-right: 1rem;
+}
+
+.acolor{
+    color: white;
+}
+.lcolor{
+    color: rgb(61, 7, 255);
+}
+
+
+.navroutealign
+{
+    justify-content: right;
+}
+ 
+mat-sidenav-container {
+    /* height: 100%; */
+    position: absolute;
+    top: 110px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+mat-sidenav, mat-sidenav-content {
+    padding: 16px;
+    background-color: rgb(240, 240, 241);
+}
+
+mat-sidenav{
+    background-color: rgba(205, 212, 218, 0.904);
+    width: 200px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.logleft{
+    text-align: right;
+}
+

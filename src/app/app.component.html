@@ -1,0 +1,50 @@
+<div style="text-align:center">
+  <h1>
+    {{ title }}...!
+  </h1>    
+ 
+</div>
+
+
+<div>
+  <mat-toolbar color="primary" class="app-toolbar">
+      
+      <div>Bulls Technology</div> 
+    
+      <div>
+          <span><a href ="/Home" class = "acolor">Home</a></span>
+          <span><a href ="#" class = "acolor">About</a></span>
+          <!-- <span><a href ="/Login" class = "acolor">Login</a></span> -->
+      </div>
+  </mat-toolbar> 
+ 
+  
+<div>
+    <a href ="/Login" class = "lcolor" class="logleft">Login</a></div>
+
+    <div>
+      <html>
+          <body>
+              <img src="./assets/bull.jpg" height="400" width="700" class="center">
+          </body>
+      </html>
+      
+    </div>
+  
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #drawer mode="side" opened role="navigation">
+    <mat-nav-list>
+      <a mat-list-item routerLink='/Dashboard'>Dashboard</a><br>
+      <a mat-list-item routerLink='/Student'>Student Information</a><br>
+      <a mat-list-item routerLink='/Faculty'>Faculty Information</a><br>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    
+
+    
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,201 @@
+<div class="container-fluid">
+    <mat-tab-group>
+    <mat-tab label =  "Student Information "> 
+    <mat-card align="left" class="cardalign">
+        <form [formGroup]="studForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+
+                <mat-accordion><mat-expansion-panel>
+
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Personal data
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                
+                <mat-form-field class = "full-width">
+                <mat-label>Application Date</mat-label>
+                <input matInput [matDatepicker]="picker1" formControlName="stud_app_date">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="stud_first_name" type="text">
+                    <!-- <small>*Name is required</small> -->
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="stud_last_name" type="text">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>Father Name</mat-label>
+                    <input matInput formControlName="stud_father_name" type="text">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>Date of Birth</mat-label>
+                    <input matInput [matDatepicker]="picker2" formControlName="stud_dob">
+                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field><br>
+
+                <mat-card>
+                    <mat-card-subtitle>Gender</mat-card-subtitle>
+                <mat-radio-group aria-label="Gender" formControlName="stud_gender">
+                    <mat-radio-button value="Male" checked="checked" color = "primary">Male</mat-radio-button>&nbsp;
+                    <mat-radio-button value="Female" color = "primary">Female</mat-radio-button>&nbsp;
+                    <mat-radio-button value="Transgender" color = "primary">Transgender</mat-radio-button>
+                  </mat-radio-group><br>
+                </mat-card><br>
+
+                  <mat-form-field class = "full-width">
+                    <mat-label>Religion & Caste</mat-label>
+                    <input matInput formControlName="stud_rel_caste" type="text" placeholder="Hindu-Kurubar">
+                </mat-form-field><br>
+    
+                <mat-form-field class = "full-width">
+                    <mat-label>Annual income of student</mat-label>
+                    <input matInput formControlName="stud_income" type="text" placeholder="2 lacs / 50k">
+                </mat-form-field><br>
+    
+                <mat-form-field class = "full-width">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput formControlName="stud_address" type="text"></textarea>
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>City</mat-label>
+                    <input matInput formControlName="stud_city" type="text">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>District</mat-label>
+                    <input matInput formControlName="stud_district" type="text">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>State</mat-label>
+                    <input matInput formControlName="stud_state" type="text">
+                </mat-form-field><br>
+
+                <mat-form-field class="full-width">
+                    <mat-label>Telephone</mat-label>
+                    <span matPrefix>+1 &nbsp;</span>
+                    <input type="tel" matInput formControlName="stud_contact_1" placeholder="9060809005">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                </mat-form-field><br>
+
+                <mat-form-field class="full-width">
+                    <mat-label>Alternate Telephone</mat-label>
+                    <span matPrefix>+1 &nbsp;</span>
+                    <input type="tel" matInput formControlName="stud_contact_2" placeholder="9620842124">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>Adhaar Number</mat-label>
+                    <input matInput formControlName="stud_adhaar_no" type="text">
+                </mat-form-field><br>
+
+            </mat-expansion-panel></mat-accordion><br>
+
+            <mat-accordion><mat-expansion-panel>
+
+                <!-- <mat-expansion-panel-header (opened)="panelOpenState = true"
+                                            (closed)="panelOpenState = false"> -->
+
+            <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Education Qualification
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+
+                  <mat-form-field class = "full-width">
+                    <mat-label>Graduation</mat-label>
+                    <input matInput formControlName="stud_graduate" type="text" placeholder="Ex: Bacholer of Engineering/ BE">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>Graduate Combination</mat-label>
+                    <input matInput formControlName="stud_grad_combi" type="text"  placeholder="Ex: Computer Science">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>Post Graduation</mat-label>
+                    <input matInput formControlName="stud_post_grad" type="text" placeholder="Ex: Master of Science /M.Sc">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>PG Combination</mat-label>
+                    <input matInput formControlName="stud_pg_combi" type="text" placeholder="Ex: Chemistry">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>Others Qualification</mat-label>
+                    <input matInput formControlName="stud_other_qual" type="text" placeholder="Ex: SSLC/PUC/ITI/Diploma">
+                </mat-form-field><br>
+
+                </mat-expansion-panel></mat-accordion><br>
+
+                <mat-accordion><mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Courses
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <mat-form-field class = "full-width">
+                        <mat-label>Course</mat-label>
+                        <input matInput formControlName="stud_course" type="text" placeholder="Ex: Node js Server side application">
+                    </mat-form-field><br>
+
+                    <mat-form-field class = "full-width">
+                        <mat-label>Batch Time</mat-label>
+                        <input matInput formControlName="stud_course_batch_time" type="text" placeholder="Ex: 12AM / 12PM">
+                    </mat-form-field><br>
+
+                    <mat-form-field class = "full-width">
+                        <mat-label>Description</mat-label>
+                        <textarea matInput formControlName="stud_description" type="text"></textarea>
+                    </mat-form-field><br>
+
+                 
+
+                </mat-expansion-panel></mat-accordion><br>
+            </div>
+
+            <div class="button-row">            
+                <button mat-raised-button color="primary" type="submit">Insert</button>&nbsp;
+                <!-- <button mat-raised-button color="primary" (click)="onReset()">Reset</button> -->
+            </div>
+
+        </form>
+    </mat-card>
+</mat-tab>
+
+<mat-tab label = "All Students Details">
+    
+    <mat-nav-list>
+        <a mat-list-item routerLink='/Student/getstud'>All Students</a><br>
+        
+    </mat-nav-list>
+
+
+</mat-tab>
+<!-- <nav mat-tab-nav-bar>
+    <a mat-tab-link
+    *ngFor="let link of navLinks"
+    [routerLink]="link.link"
+    routerLinkActive #rla="routerLinkActive"
+    [active]="rla.isActive">
+    
+    </a>
+    </nav> -->
+
+</mat-tab-group>
+</div>
+<router-outlet></router-outlet>

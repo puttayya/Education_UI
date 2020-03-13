@@ -1,0 +1,153 @@
+<div class="container-fluid">
+    <h2>Faculty Information</h2>
+    <mat-card align="left" class="cardalign">
+        <form [formGroup]="facuForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+
+                <mat-accordion><mat-expansion-panel>
+
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Personal data
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                
+                <mat-form-field class = "full-width">
+                <mat-label>Application Date</mat-label>
+                <input matInput [matDatepicker]="picker1" formControlName="fac_app_date">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="fac_first_name" type="text">
+                    <!-- <small>*Name is required</small> -->
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="fac_last_name" type="text">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>Father Name</mat-label>
+                    <input matInput formControlName="fac_father_name" type="text">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>Date of Birth</mat-label>
+                    <input matInput [matDatepicker]="picker2" formControlName="fac_dob">
+                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field><br>
+
+                <mat-card>
+                    <mat-card-subtitle>Gender</mat-card-subtitle>
+                <mat-radio-group aria-label="Gender" formControlName="fac_gender">
+                    <mat-radio-button value="Male" checked="checked" color = "primary">Male</mat-radio-button>&nbsp;
+                    <mat-radio-button value="Female" color = "primary">Female</mat-radio-button>&nbsp;
+                    <mat-radio-button value="Transgender" color = "primary">Transgender</mat-radio-button>
+                  </mat-radio-group><br>
+                </mat-card><br>
+
+                  <mat-form-field class = "full-width">
+                    <mat-label>Religion & Caste</mat-label>
+                    <input matInput formControlName="fac_rel_caste" type="text" placeholder="Hindu-Kurubar">
+                </mat-form-field><br>
+    
+                   
+                <mat-form-field class = "full-width">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput formControlName="fac_address" type="text"></textarea>
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>City</mat-label>
+                    <input matInput formControlName="fac_city" type="text">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>District</mat-label>
+                    <input matInput formControlName="fac_district" type="text">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>State</mat-label>
+                    <input matInput formControlName="fac_state" type="text">
+                </mat-form-field><br>
+
+                <mat-form-field class="full-width">
+                    <mat-label>Telephone</mat-label>
+                    <span matPrefix>+1 &nbsp;</span>
+                    <input type="tel" matInput formControlName="fac_contact_1" placeholder="9060809005">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                </mat-form-field><br>
+
+                <mat-form-field class="full-width">
+                    <mat-label>Alternate Telephone</mat-label>
+                    <span matPrefix>+1 &nbsp;</span>
+                    <input type="tel" matInput formControlName="fac_contact_2" placeholder="9620842124">
+                    <mat-icon matSuffix>mode_edit</mat-icon>
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>Adhaar Number</mat-label>
+                    <input matInput formControlName="fac_adhaar_no" type="text">
+                </mat-form-field><br>
+
+            </mat-expansion-panel></mat-accordion><br>
+
+            <mat-accordion><mat-expansion-panel>
+
+                <!-- <mat-expansion-panel-header (opened)="panelOpenState = true"
+                                            (closed)="panelOpenState = false"> -->
+
+            <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Education Qualification
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+
+                  <mat-form-field class = "full-width">
+                    <mat-label>Graduation</mat-label>
+                    <input matInput formControlName="fac_graduate" type="text" placeholder="Ex: Bacholer of Engineering/ BE">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>Graduate Combination</mat-label>
+                    <input matInput formControlName="fac_grad_combi" type="text"  placeholder="Ex: Computer Science">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>Post Graduation</mat-label>
+                    <input matInput formControlName="fac_post_grad" type="text" placeholder="Ex: Master of Science /M.Sc">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>PG Combination</mat-label>
+                    <input matInput formControlName="fac_pg_combi" type="text" placeholder="Ex: Chemistry">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>Others Qualification</mat-label>
+                    <input matInput formControlName="fac_other_qual" type="text" placeholder="Ex: SSLC/PUC/ITI/Diploma">
+                </mat-form-field><br>
+
+                <mat-form-field class = "full-width">
+                    <mat-label>Description</mat-label>
+                    <textarea matInput formControlName="fac_description" type="text"></textarea>
+                </mat-form-field><br>
+
+                </mat-expansion-panel></mat-accordion><br>
+
+            </div>
+
+            <div class="button-row">            
+                <button mat-raised-button color="primary" type="submit">Insert</button>&nbsp;
+                <!-- <button mat-raised-button color="primary" (click)="onReset()">Reset</button> -->
+            </div>
+
+        </form>
+    </mat-card>
+</div>
